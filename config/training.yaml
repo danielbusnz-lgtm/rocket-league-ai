@@ -1,0 +1,41 @@
+# Training Configuration
+# YOU will learn how to tune these parameters
+
+training:
+  # How many games to play during training
+  max_episodes: 10000
+
+  # How many steps per game before resetting
+  max_steps_per_episode: 3000
+
+  # Learning rate - how fast the bot learns (too high = unstable, too low = slow)
+  learning_rate: 0.0003
+
+  # Discount factor - how much future rewards matter (0-1)
+  gamma: 0.99
+
+  # Batch size for training
+  batch_size: 64
+
+  # How often to save the model
+  save_frequency: 100
+
+neural_network:
+  # Network architecture - YOU will learn what these mean
+  hidden_layers: [256, 256, 128]
+  activation: "relu"
+
+model:
+  # Where to save/load trained models
+  save_path: "models/"
+  load_pretrained: false
+  pretrained_path: ""
+
+rewards:
+  # Reward shaping - YOU will design this
+  # These numbers encourage different behaviors
+  touch_ball: 0.1
+  goal_scored: 10.0
+  goal_conceded: -10.0
+  velocity_toward_ball: 0.01
+  boost_usage: -0.001
