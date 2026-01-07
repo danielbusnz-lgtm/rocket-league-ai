@@ -1,0 +1,61 @@
+Setting up RLGym PPO Learner...
+This will train a Rocket League bot using PPO algorithm.
+
+Configuration:
+  Parallel environments: 4
+  Min inference size: 4
+  Training for: 10 million timesteps
+  Saving checkpoints every: 1M timesteps
+
+Using device cuda:0
+Initializing processes...
+Traceback (most recent call last):
+  File "/home/dan/Projects/Personal/rocket-league-ai/venv/lib/python3.13/site-packages/rlgym_ppo/learner.py", line 225, in learn
+    self._learn()
+    ~~~~~~~~~~~^^
+  File "/home/dan/Projects/Personal/rocket-league-ai/venv/lib/python3.13/site-packages/rlgym_ppo/learner.py", line 247, in _learn
+    kb = KBHit()
+  File "/home/dan/Projects/Personal/rocket-league-ai/venv/lib/python3.13/site-packages/rlgym_ppo/util/kbhit.py", line 46, in __init__
+    self.new_term = termios.tcgetattr(self.fd)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+termios.error: (25, 'Inappropriate ioctl for device')
+WARNING: CALLING ENV.RESET() ONE EXTRA TIME TO DETERMINE STATE AND ACTION SPACES
+Received request for env shapes, returning:
+- Observations shape: (72,)
+- Number of actions: 90.0
+- Action space type: 0.0 (Discrete)
+--------------------
+WARNING: CALLING ENV.RESET() ONE EXTRA TIME TO DETERMINE STATE AND ACTION SPACES
+WARNING: CALLING ENV.RESET() ONE EXTRA TIME TO DETERMINE STATE AND ACTION SPACES
+WARNING: CALLING ENV.RESET() ONE EXTRA TIME TO DETERMINE STATE AND ACTION SPACES
+Initializing PPO...
+Trainable Parameters:
+Component  Count     
+--------------------
+Policy     7585882   
+Critic     7494657   
+--------------------
+Total      15080539  
+Current Policy Learning Rate: 0.0001
+Current Critic Learning Rate: 0.0001
+Auto-load path: data/checkpoints/rlgym-ppo-run-1767823694239204180/0
+Loading from checkpoint at data/checkpoints/rlgym-ppo-run-1767823694239204180/0
+LOADED RUNNING STATS FROM JSON | Mean: [0.] | Variance: [0.] | Count: 0
+LOADED RUNNING STATS FROM JSON | Mean: [0.] | Variance: [0.] | Count: 0
+New policy learning rate: 0.0001
+New policy learning rate: 0.0001
+Checkpoint loaded!
+Learner successfully initialized!
+Starting training...
+Press Ctrl+C to stop training early.
+
+
+
+LEARNING LOOP ENCOUNTERED AN ERROR
+
+Saving checkpoint 0...
+Checkpoint 0 saved!
+
+
+Training complete!
+Models saved in: data/checkpoints/

@@ -1,22 +1,22 @@
-# Rocket League AI Bot Dependencies
+# RLGym 2.0 - Modern RL training for Rocket League
+rlgym>=2.0.0
+rlgym-tools>=2.0.0
+rlgym_ppo>=1.0.0
 
-# Core RLBot Framework
-rlbot>=1.50.0              # Connects Python to Rocket League
-rlbot-gui>=1.0.0           # Visual interface for managing bots
+# Deep Learning
+torch>=2.0.0
+numpy>=1.24.0
 
-# Machine Learning / AI
-torch>=2.0.0               # PyTorch for neural networks
-numpy>=1.24.0              # Math and array operations
-gymnasium>=0.28.0          # Reinforcement learning environments
+# Training Utilities
+tensorboard>=2.13.0
 
-# Training & Optimization
-tensorboard>=2.13.0        # Visualize training progress
-optuna>=3.2.0              # Hyperparameter optimization (optional)
+# Optional: Weights & Biases for logging
+wandb>=0.15.0
 
 # Utilities
-pyyaml>=6.0                # Config file parsing
-matplotlib>=3.7.0          # Plotting and visualization
+pyyaml>=6.0
+matplotlib>=3.7.0
 
 # Development Tools
-pytest>=7.3.0              # Testing framework
-black>=23.0.0              # Code formatter
+pytest>=7.3.0
+black>=23.0.0
